@@ -1,10 +1,10 @@
-# Luna Market - Auction House (Semester Project 2)
+# FED2 - Semester Project 2
 
 This is my Semester Project 2 for the Front-End Development at Norfoff. The goal is to build a front-end Auction House application using the Noroff API v2.
 
 ## Feautures 
 - Register with @stud.noroff.no
-- Login / Logout
+- Secured log in and logout with stored token
 - View and edit profile (bio + avatar)
 - See credits in header when logged in
 - Create, edit and delete listings
@@ -12,6 +12,19 @@ This is my Semester Project 2 for the Front-End Development at Norfoff. The goal
 - View single listing with bid history
 - Place bids on other users listings (only when logged in, not on own listings)
 - Logged-out users can browse and view single listings but not bid
+
+## Pages
+### Main pages:
+- `/index.html` - Homepage / Browse listings
+- `/listings.html` - Search & browse listings
+### Account:
+- `/account/login.html` -Login 
+- `/account/register.html` - Register
+- `/account/profile.html` - User profile (View profile, listings + bids + credits)
+### Listings:
+- `/post/create.html` - Create new listing
+- `/post/edit.html` - Edit/Delete own listing
+- `/post/listing.html` - Single listing view (bid history + bidding)
 
 ## Technologies Used
 - HTML, CSS, vanilla Javascript
@@ -33,4 +46,10 @@ This is my Semester Project 2 for the Front-End Development at Norfoff. The goal
 - `listing.js`
 
 ## Known issues / Limitations
-- Media uploads use externally hosted image URLs causing lighouse 
+- Media uploads rely on externally hosted image URLs, which causes lighthouse to flag some third-party performance warnings. 
+
+## Assistance 
+During development I used ChatGPT as a supportive tool to help debug issues, better understand JavaScript logic, and refine code structure.
+
+## Author 
+Karina Haukland Uggerud
