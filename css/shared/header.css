@@ -1,0 +1,153 @@
+.site-header {
+    background-color: var(--header-footer-bg);
+    position: relative;
+}
+
+.site-header .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.header-logo {
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.home-link:hover {
+    border-color: var(--border-soft);
+}
+
+.login-link {
+    font-size: 0.95rem;
+}
+
+.register-button {
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radius-md);
+    border: none;
+    background-color: var(--btn-primary);
+    color: var(--btn-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.register-link {
+    display: none;
+}
+
+/* hide credits */ 
+.header-credits:empty {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* dropdown menu */ 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.menu-toggle i {
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    transform-origin: center center;
+}
+
+.menu-toggle.open i {
+    transform: rotate(90deg);
+}
+
+/* when logged in links */
+.header-credits {
+    display: flex;
+    align-items: center;
+    display: none;
+    margin-left: auto;
+    margin-right: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+
+
+.logout-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-nav .auth-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 85%;
+        right: 0;
+        margin-top: 0.5rem;
+        background-color: var(--header-footer-bg);
+        border-radius: 5px;
+        padding: 0.75rem 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        z-index: 10;
+        box-shadow: var(--shadow-soft);
+        min-width: 9.5rem;
+    }
+
+    .header-nav.is-open {
+        display: flex;
+    }
+
+
+    /* register button */ 
+    .register-button {
+        display: none !important;
+    }
+
+    .register-button {
+        width: 100%;
+        text-align: right;
+    }
+}

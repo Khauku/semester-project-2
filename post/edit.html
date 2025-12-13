@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Preconnect Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Manrope:wght@400;600;700&display=swap">
+    <!--Font awesome icons-->
+    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/jpg" href="../images/hero-image.jpg">
+    <!--Metadata & stylesheets-->
+    <title>Luna Market | Edit Listing</title>
+    <meta name="description" content="Edit your existing Luna Market listing. Update title, description, image and auction end date.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/post/form.css">
+</head>
+<body class="edit-page">
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="header-logo">Luna Market</a>
+            <!--Mobile toggle-->
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="../index.html" class="home-link">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    <span class="visually-hidden">Home</span>
+                </a>
+                <!--credits placeholder - JS later-->
+                <span class="header-credits" data-user-credits></span>
+                <!--auth links - when logged out-->
+                <a href="../account/login.html" class="login-link auth-link">Sign in</a>
+                <a href="../account/register.html" class="register-button auth-link">Register</a>
+                <!--extra register link for dropdown menu-->
+                <a href="../account/register.html" class="register-link auth-link" hidden>Register</a>
+                <!--auth links - when logged in-->
+                <a href="../account/profile.html" class="profile-link auth-link" hidden>Profile</a>
+                <a href="#" class="logout-link auth-link" hidden>Log out</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="post-form-wrapper" aria-labelledby="edit-listing-heading">
+            <h1 id="edit-listing-heading">Edit Listing</h1>
+            <form id="edit-listing-form" class="post-form" method="post" novalidate>
+                <!-- success/error message -->
+                <div id="edit-message" class="form-message" role="status" aria-live="polite">
+                    <p class="form-error" data-form-error hidden></p>
+                    <p class="form-success" data-form-success hidden></p>
+                </div>
+                <!-- title -->
+                <label for="listing-title">Listing title</label>
+                <input type="text" id="listing-title" name="title" required maxlength="80" autocomplete="off">
+                <!-- description -->
+                <label for="listing-description">Description</label>
+                <textarea id="listing-description" name="description" rows="8" required></textarea>
+                <!-- end date/time -->
+                <label for="listing-endsAt">Auction end date &amp; time</label>
+                <input type="datetime-local" id="listing-endsAt" name="endsAt" required>
+                <!-- media -->
+                <fieldset class="media-fieldset">
+                    <legend>Image</legend>
+                    <p class="hint">Update the image for your listing.</p>
+                    <div class="media-field">
+                        <!-- image iput -->
+                        <label for="media-url">Image Url</label>
+                        <input type="url" id="media-url" name="mediaUrl" class="media-url-input" required inputmode="url">
+                        <!-- image description -->
+                        <label for="media-alt">Image description (alt text)</label>
+                        <input type="text" id="media-alt" name="mediaAlt" class="media-alt-input" required>
+                    </div>
+                </fieldset>
+                <!-- buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="save-btn" data-submit-button>
+                        Save changes
+                    </button>
+                    <button type="button" class="delete-btn" data-delete-button>
+                        Delete listing
+                    </button>
+                </div>
+            </form>
+        </section>
+        <nav class="back-profile">
+            <a href="../account/profile.html" class="back-link">
+                « Back to profile
+            </a>
+        </nav>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container container">
+            <div class="footer-info">
+                <p><strong>contact us:</strong>info@lunamarket.com</p>
+                <p>&copy; 2025 Luna. all rights reserved.</p>
+            </div>
+            <div class="footer-center">
+                <a href="../index.html" class="header-logo">Luna Market</a>
+            </div>
+            <div class="footer-social">
+                <p>follow us:</p>
+                <ul>
+                    <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/shared/header.js" type="module"></script> 
+    <script src="../js/post/edit.js" type="module"></script> 
+</body>
+</html>

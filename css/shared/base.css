@@ -1,0 +1,92 @@
+
+:root{
+    /* fonts */
+    --font-family-base: "Work sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family-heading: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    /* colors */
+    /* primary */
+    --text: #4A4A4A;
+    --text-muted: #6F6F6F;
+    --text-hero: #2B2626;
+    /* error/success messages */
+    --text-error: #B3261E;
+    --text-success: #0B8062;
+    /* page + structure */
+    --page-bg: #FFFFFF;
+    --browse-bar-bg: #FFFCF9;  
+    --header-footer-bg: #FFFCF9;
+    /* cards */
+    --card-bg: #FFFCF7; /* listings background */
+    --form-bg: #FBFAFA; /* login/register & edit/create form backgorund */
+    /* buttons */
+    --btn-primary: #EABF9F;
+    --btn-primary-hover: #EDCFB8;
+    --btn-secondary: #F4EFE8;
+    --btn-secondary-hover: #E8E2DB;
+    --btn-text: #3F2A1F;
+    /* inputs */
+    --input-border: #D9D9D9;
+    --input-bg: #FFFFFF;
+    /* misc */
+    --border-soft: #E4DFD7;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+
+    --container-width: 1300px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    color: var(--text);
+    background-color: var(--page-bg);
+    line-height: 1.5;
+}
+
+/* removing link underline */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-heading);
+    color: var(--text);
+}
+
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ensure hidden attribute actually hides elemnts - listing.html */
+[hidden] {
+    display: none !important;
+}

@@ -1,0 +1,39 @@
+/* search bar used on: homepage & listings page */
+.browse-search {
+    position: relative;
+    margin-left: auto;
+}
+
+.browse-search-input {
+    width: 380px;
+    min-height: 44px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--input-border);
+    padding: 0.4rem 2rem 0.4rem 1rem;
+    background-color: var(--input-bg);
+    font-size: 0.9rem;
+}
+
+.browse-search-input:focus {
+    outline: none;
+    border-color: var(--btn-primary);
+    box-shadow: 0 0 0 3px rgba(234, 191, 159, 0.3);
+}
+
+.browse-search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.4rem;
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 4px;
+}
+
+.browse-search-button i {
+    font-size: 0.95rem;
+}
